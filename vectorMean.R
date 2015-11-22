@@ -5,9 +5,15 @@ makeVector <- function(x = numeric()) {
         x <<- y
         m <<- NULL
     }
-    get <- function() x
-    setmean <- function(mean) m <<- mean
-    getmean <- function() m
+    get <- function() {
+        x
+    }
+    setmean <- function(mean) {
+        m <<- mean
+    }
+    getmean <- function(){
+        m
+    }
     
     list(set = set, 
          get = get,
@@ -26,3 +32,4 @@ cachemean <- function(x, ...) {
     x$setmean(m)
     m
 }
+
